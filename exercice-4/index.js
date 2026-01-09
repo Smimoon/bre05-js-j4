@@ -28,3 +28,35 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     });
 })
+
+//SOLUTION OPTIMALE 
+
+// window.addEventListener("DOMContentLoaded", () => {
+
+//   // je selectionne tous les boutons
+//   let buttons = document.querySelectorAll("button");
+
+//   for(let button of buttons)
+//   {
+//     // j'écoute l'event clic de chaque bouton
+//     button.addEventListener("click", (event) => {
+//       let target = event.target;
+
+//       // je récupère la p avec l'id correspondant
+//       let tab = document.querySelector(p#${target.id}-content);
+
+//       // je récupère les p qui n'ont pas cet id
+//       let notTabs = document.querySelectorAll(p:not(#${target.id}-content));
+
+//       // je cache les mauvais p
+//       for(let notTab of notTabs)
+//       {
+//         notTab.style.display = "none";
+//       }
+
+//       // j'affiche le bon
+//       tab.style.display = "block";
+
+//     });
+//   }
+// });
