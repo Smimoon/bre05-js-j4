@@ -1,29 +1,30 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="utf-8" >
-        <title>
-            Exercice 4 : changer d'onglet
-        </title>
-    </head>
-    <body>
-        <style>
-            p {
-                display: none;
-            }
-        </style>
-        <button id="tab-1">Onglet 1</button>
-        <button id="tab-2">Onglet 2</button>
-        <button id="tab-3">Onglet 3</button>
-        <p id="tab-1-content">
-            Je suis le contenu de l'onglet 1.
-        </p>
-        <p id="tab-2-content">
-            Je suis le contenu de l'onglet 2.
-        </p>
-        <p id="tab-3-content">
-            Je suis le contenu de l'onglet 3.
-        </p>
-    </body>
-    <script type="application/javascript" src="index.js"></script>
-</html>
+window.addEventListener("DOMContentLoaded", () => {
+    let button1 = document.getElementById("tab-1");
+    let button2 = document.getElementById("tab-2");
+    let button3 = document.getElementById("tab-3");
+    let p1 = document.getElementById("tab-1-content");
+    let p2 = document.getElementById("tab-2-content");
+    let p3 = document.getElementById("tab-3-content");
+    
+    button1.addEventListener("click", (event) => {
+        p1.style.display = "block";
+        if(p2.style.display === "block" || p3.style.display === "block") {
+            p2.style.display = "none";
+            p3.style.display = "none";
+        }
+    });
+    button2.addEventListener("click", (event) => {
+        p2.style.display = "block";
+        if(p1.style.display === "block" || p3.style.display === "block") {
+            p1.style.display = "none";
+            p3.style.display = "none";
+        }
+    });
+    button3.addEventListener("click", (event) => {
+        p3.style.display = "block";
+        if(p2.style.display === "block" || p1.style.display === "block") {
+            p2.style.display = "none";
+            p1.style.display = "none";
+        }
+    });
+})
